@@ -1,0 +1,52 @@
+body {
+    background-image: url("bg.jpg");
+    background-size: 95%;
+}
+
+.header {
+    color: #BD2D2D;
+    border-bottom-style: groove;
+    font-size: 50px;
+}
+
+.login {
+    margin-top: 10%;
+    margin-left: 40%;
+    width: 250px;
+    height: 400px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 200%;
+    background: none;
+}
+
+.box {
+    padding: 15px;
+    background-color: greenyellow;
+    width: 280px;
+    border-radius: 25px;
+    border-color: red;
+    cursor: pointer;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: blue;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.txt {
+    width: 250px;
+    transition: all .3s;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    border-color: blueviolet;
+    text-align: center;
+    cursor: pointer;
+}
+
+.txt:focus {
+    width: 300px;
+    border-color: green;
+}
+
+.btn:hover {
+    background-color: black;
+}
