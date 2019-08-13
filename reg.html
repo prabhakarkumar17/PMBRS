@@ -6,37 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <script src="reg.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Report Form</title>
-
-    <script>
-        $(document).ready(function() {
-            $("#name").focus(function() {
-                $(this).css("background", "#ffb3b3");
-            });
-
-            $("#email").focus(function() {
-                $(this).css("background", "#ffb3b3");
-            });
-
-            $("#contact_no").focus(function() {
-                $(this).css("background", "#ffb3b3");
-            });
-
-            $("#date").focus(function() {
-                $(this).css("background", "#ffb3b3");
-            });
-
-            $("#image").focus(function() {
-                $(this).css("background", "#ffb3b3");
-            });
-        });
-    </script>
-
 </head>
 
 <body>
@@ -50,26 +20,26 @@
                 <form>
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input class="form-control" type="text" placeholder="Enter customer name" id="name" value="" />
+                        <input class="form-control" onfocus="validate_name()" onblur="validate_name" onkeypress="validate_name()" type="text" placeholder="Enter customer name" id="name" value="" />
                         <div id="error_name" style="color: red"></div>
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input class="form-control" type="email" placeholder="Enter email" id="email" value="" />
+                        <input class="form-control" onfocus="validate_email()" onblur="validate_email()" onkeypress="validate_email()" type="email" placeholder="Enter email" id="email" value="" />
                         <div id="error_email" style="color: red"></div>
                     </div>
 
                     <div class="contact_no">
                         <label for="contact_no">Contact</label>
-                        <input class="form-control" type="text" placeholder="Enter contact_no" id="contact_no" value="" />
+                        <input class="form-control" onfocus="validate_contact()" onblur="validate_contact()" onkeypress="validate_contact()" type="text" placeholder="Enter contact_no" id="contact_no" value="" />
                         <div id="error_contact" style="color: red"></div>
                     </div>
 
                     <div class="form-group">
                         <br>
                         <label for="date">Purchase Date</label>
-                        <input class="form-control" type="date" placeholder="Enter Purchase Date" id="date" value="" />
+                        <input class="form-control" onfocus="validate_date()" onblur="validate_date()" onkeypress="validate_date()" type="date" placeholder="Enter Purchase Date" id="date" value="" />
                         <div id="error_date" style="color: red"></div>
                     </div>
 
@@ -89,6 +59,11 @@
         </div>
     </div>
 
+    <script src="reg.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"></script>
     <script crossorigin="anonymous"></script>
@@ -97,6 +72,26 @@
     <script crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#name").focus(function() {
+                $(this).css("background", "#99FF99");
+            });
+
+            $("#email").focus(function() {
+                $(this).css("background", "#99FF99");
+            });
+
+            $("#contact_no").focus(function() {
+                $(this).css("background", "#99FF99");
+            });
+
+            $("#date").focus(function() {
+                $(this).css("background", "#99FF99");
+            });
+        });
+    </script>
 </body>
 
 </html>
