@@ -79,17 +79,71 @@
                 $(this).css("background", "#99FF99");
             });
 
+            $('#name').on('input', function() {
+                var input = $(this);
+                var is_name = input.val();
+
+                if (is_name.length == "") {
+                    document.getElementById("error_name").innerHTML = "**name should not be blank";
+                } else if ((is_name.length < 3) || (is_name.length > 25)) {
+                    document.getElementById("error_name").innerHTML = "**name should be within range of 3 to 25 words";
+                } else {
+                    document.getElementById("error_name").innerHTML = "";
+                }
+            });
+
             $("#email").focus(function() {
                 $(this).css("background", "#99FF99");
+            });
+
+            $('#email').on('input', function() {
+                var text = $(this);
+                var is_email = text.val();
+
+                var regx = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9]{5,8}+).([a-z]{2,20})$/;
+
+                if (regx.test(is_email) == false) {
+                    document.getElementById("error_email").innerHTML = "**enter valid email";
+                } else {
+                    document.getElementById("error_email").innerHTML = "";
+                }
             });
 
             $("#contact_no").focus(function() {
                 $(this).css("background", "#99FF99");
             });
 
+            $('#contact_no').on('input', function() {
+                var mobile = $(this);
+                var is_contact = mobile.val();
+
+                var contact = /^[6-9]\d{9}$/;
+
+                if (contact.test(is_contact) == false) {
+                    document.getElementById("error_contact").innerHTML = "**enter valid contact no";
+
+                } else {
+                    document.getElementById("error_contact").innerHTML = " ";
+                }
+            })
+
             $("#date").focus(function() {
                 $(this).css("background", "#99FF99");
             });
+
+            $('#date').on('input', function() {
+                var date = $(this);
+                var is_date = date.val();
+
+                var text = /^([1-31])([1-12])([1990-2030])$/;
+
+                if (text.test(is_date) == false) {
+                    document.getElementById("error_date").innerHTML = "**enter valid date";
+                } else {
+                    document.getElementById("error_date").innerHTML = " ";
+                }
+
+            })
         });
     </script>
 </body>
