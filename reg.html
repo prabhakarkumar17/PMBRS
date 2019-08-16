@@ -20,26 +20,26 @@
                 <form>
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input class="form-control" onfocus="validate_name()" onblur="validate_name" onkeypress="validate_name()" type="text" placeholder="Enter customer name" id="name" value="" />
+                        <input class="form-control" type="text" placeholder="Enter customer name" id="name" value="" />
                         <div id="error_name" style="color: red"></div>
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input class="form-control" onfocus="validate_email()" onblur="validate_email()" onkeypress="validate_email()" type="email" placeholder="Enter email" id="email" value="" />
+                        <input class="form-control" type="email" placeholder="Enter email" id="email" value="" />
                         <div id="error_email" style="color: red"></div>
                     </div>
 
-                    <div class="contact_no">
+                    <div class="form-group">
                         <label for="contact_no">Contact</label>
-                        <input class="form-control" onfocus="validate_contact()" onblur="validate_contact()" onkeypress="validate_contact()" type="text" placeholder="Enter contact_no" id="contact_no" value="" />
+                        <input class="form-control" type="text" placeholder="Enter contact_no" id="contact_no" value="" />
                         <div id="error_contact" style="color: red"></div>
                     </div>
 
                     <div class="form-group">
                         <br>
                         <label for="date">Purchase Date</label>
-                        <input class="form-control" onfocus="validate_date()" onblur="validate_date()" onkeypress="validate_date()" type="date" placeholder="Enter Purchase Date" id="date" value="" />
+                        <input class="form-control" type="date" placeholder="Enter Purchase Date" id="date" value="" />
                         <div id="error_date" style="color: red"></div>
                     </div>
 
@@ -100,7 +100,7 @@
                 var text = $(this);
                 var is_email = text.val();
 
-                var regx = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9]{5,8}+).([a-z]{2,20})$/;
+                var regx = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9]+).([a-z]{2,20})$/;
 
                 if (regx.test(is_email) == false) {
                     document.getElementById("error_email").innerHTML = "**enter valid email";
