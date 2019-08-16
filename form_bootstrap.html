@@ -5,31 +5,20 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login Page!</title>
 
-
-    <!-- Bootstrap CSS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="boot__style.css">
-    <title>Hello, world!</title>
+    <script src="form.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $("#userid").focus(function() {
-                $(this).css("background", "#ffb3b3");
-            });
-
-            $("#password").focus(function() {
-                $(this).css("background", "#ffb3b3");
-            });
-
-        });
-    </script>
 
 </head>
 
 <body>
-
-
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
@@ -37,34 +26,49 @@
                     <h1>Prove YOURSELF!!!</h1>
                 </header>
 
-                <form onsubmit="validate()" action="reg.html" method="POST">
-
+                <form onsubmit="return validate()" action="reg.html" method="POST">
                     <div class="form-group">
-                        <label for="userid">username</label>
+                        <label for="userid" id="uname">Username</label>
                         <input type="text" class="form-control" placeholder="Username" id="userid">
+                        <div id="msg" style="color: red"></div>
                     </div>
-
                     <div class="form-group">
-                        <label for="password">password</label>
+                        <label for="password" id="pswd">password</label>
                         <input class="form-control" type="password" placeholder="Enter password" value="" id="password" />
                     </div>
                     <div class="checkbox">
                         <input type="checkbox" id="chkbox">Remember Me<br></br>
                     </div>
                     <button class="btn btn-primary" type="submit" id="submit" style="width: 150px"><a href="#"></a>Login</button>
-
                 </form>
             </div>
-
         </div>
-
     </div>
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
 </body>
+
+<script>
+    $(document).ready(function() {
+        $("#userid").focus(function() {
+            $(this).css("background", "#99ff99");
+        });
+
+        $('#userid').on('input', function() {
+            var input = $(this);
+            var is_name = input.val();
+            if (is_name.length < 3 || is_name.length > 20) {
+                document.getElementById("msg").innerHTML = "**User name sholud be in range of 3 to 25";
+            } else {
+                document.getElementById("msg").innerHTML = "";
+            }
+        });
+
+
+        $("#password").focus(function() {
+            $(this).css("background", "#99ff99");
+        });
+
+
+    });
+</script>
 
 </html>
