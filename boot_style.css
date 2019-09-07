@@ -1,0 +1,80 @@
+body {
+    
+    position: fixed;
+    top: 20%;
+    left: 40%;
+    background-image: url('bg.jpg');
+    align-content: center;
+
+}
+
+#mdl{
+    width: 10%;
+    border-radius: 15px;
+    position: fixed;
+    top: 5%;
+    left: 88%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+#box-1{
+    opacity: 1.5;
+    position: fixed;
+    margin-bottom: 10%;
+    margin-left:1%;
+    padding-bottom:5%; 
+    padding-top:5%; 
+}
+
+.modal-content{
+    background-image: url('bgimage.jpg');
+    color: whitesmoke;
+}
+
+.modal-title{
+    
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    background-repeat: no-repeat;
+    font-weight: bold;
+}
+
+header h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    text-decoration:underline;
+
+}
+
+.modal-footer .btn {
+    border: 2px solid black;
+    background-color: darkolivegreen;
+    
+}
+
+.modal-footer button:hover{
+    color: aquamarine;
+}
+
+#uname,#pswd,.checkbox{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#chkbox{
+    width: 25px;
+}
+
+#submit{
+    width: 100%;
+    border-radius: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#userid,#password{
+    border-radius:18px;
+    background-color: lightgray;
+}
+
